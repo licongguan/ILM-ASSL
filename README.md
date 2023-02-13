@@ -46,7 +46,7 @@ git clone https://github.com/licongguan/STAL.git && cd STAL
 conda create -n stal python=3.6.9
 conda activate stal
 pip install -r requirements.txt
-pip install pip install torch==1.8.1+cu102 torchvision==0.9.1+cu102 -f https://download.pytorch.org/whl/torch_stable.html
+pip install torch==1.8.1+cu102 torchvision==0.9.1+cu102 -f https://download.pytorch.org/whl/torch_stable.html
 ```
 
 ### Data Preparation
