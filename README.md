@@ -53,24 +53,20 @@ pip install torch==1.8.1+cu102 torchvision==0.9.1+cu102 -f https://download.pyto
 
 - Download [The Cityscapes Dataset](https://www.cityscapes-dataset.com/), [The GTAV Dataset](https://download.visinf.tu-darmstadt.de/data/from_games/), and [The SYNTHIA Dataset](https://synthia-dataset.net/)
 
-<details>
-  <summary>For Cityscapes</summary>
+**The data folder should be structured as follows:**
 
-Unzip the files to folder ```data``` and make the dictionary structures as follows:
-
-```angular2html
-data/dataset
-├── gtFine
-│   ├── test
-│   ├── train
-│   └── val
-└── leftImg8bit
-    ├── test
-    ├── train
-    └── val
 ```
-
-</details>
+├── datasets/
+│   ├── cityscapes/     
+|   |   ├── gtFine/
+|   |   ├── leftImg8bit/
+│   ├── gtav/
+|   |   ├── images/
+|   |   ├── labels/
+│   └──	synthia/
+|   |   ├── RAND_CITYSCAPES/
+│   └──	
+```
 
 
 <details>
@@ -80,7 +76,7 @@ Unzip the files to folder ```data``` and rename the image/label  files for GTAV/
 
 
 ```bash
-python datasets/rename_gta5.py
+python stal/datasets/rename_gta5.py
 ```
 
 next, move data to follow folder:
