@@ -9,6 +9,8 @@ by [Licong Guan](https://licongguan.github.io/), Xue Yuan
 
 </div>
 
+<div align="center"> <img width="70%" src="./img/Performance_comparison.png"></div>
+
 This repository provides the official code for the paper [Iterative Loop Learning Combining Self-Training and Active Learning for Domain Adaptive Semantic Segmentation](https://arxiv.org/abs/2301.13361).
 
 
@@ -26,9 +28,6 @@ This repository provides the official code for the paper [Iterative Loop Learnin
 ![image](./img/pipeline.png)
 
 <!-- ![image](./img/Performance_comparison.png) -->
-
-<div align="center"> <img width="70%" src="./img/Performance_comparison.png"></div>
-
 
 For more information on STAL, please check our **[[Paper](https://arxiv.org/pdf/2301.13361.pdf)]**.
 
@@ -53,7 +52,7 @@ pip install torch==1.8.1+cu102 torchvision==0.9.1+cu102 -f https://download.pyto
 
 - Download [The Cityscapes Dataset](https://www.cityscapes-dataset.com/), [The GTAV Dataset](https://download.visinf.tu-darmstadt.de/data/from_games/), and [The SYNTHIA Dataset](https://synthia-dataset.net/)
 
-**The data folder should be structured as follows:**
+**First, the data folder should be structured as follows:**
 
 ```
 ├── datasets/
@@ -64,40 +63,28 @@ pip install torch==1.8.1+cu102 torchvision==0.9.1+cu102 -f https://download.pyto
 |   |   ├── images/
 |   |   ├── labels/
 │   └──	synthia/
-|   |   ├── RAND_CITYSCAPES/
+|   |   ├── RGB/
+|   |   ├── LABELS/
 │   └──	
 ```
 
-
-<details>
-  <summary>For GTAV and SYNTHIA</summary>
-
-Unzip the files to folder ```data``` and rename the image/label  files for GTAV/SYNTHIA Datasets by running
-
+**Second, generate ```_labelTrainIds.png``` for the cityscapes dataset:**
 
 ```bash
-python stal/datasets/rename_gta5.py
+pip install cityscpaesscripts
+
+pip install cityscpaesscripts[gui]
+
+export CITYSCAPES_DATASET='/path_to_cityscapes'
+
+csCreateTrainIdLabelImgs
 ```
 
-next, move data to follow folder:
+**Final, rename the gtav and synthia files for  by running:**
 
-```angular2html
-data/dataset
-├── gtFine
-│   ├── test
-│   ├── train
-│   │   ├── gta5
-│   │   ├── synthia
-│   └── val
-└── leftImg8bit
-    ├── test
-    ├── train
-    │   ├── gta5
-    │   ├── synthia
-    └── val
+```bash
+python stal/datasets/rename.py
 ```
-
-</details>
 
 ### Prepare Pretrained Backbone
 
@@ -131,10 +118,13 @@ We have put our model checkpoints here [[Google Drive](https://drive.google.com/
 
 ### STAL Training
 
-We can train a model with labeled data from the GTAV dataset ```2000``` and labeled data from the Cityscapes dataset ```30 (1%)```:
+**We provide the training scripts  using  Multiple GPU.**
 
 ```bash
-cd  experiments/splits/gtav2cityscapes/1.0%
+# training for GTAV to Cityscapes
+# use GTAV 2000 labeled images and Cityscpaes 30(1%) labeled images
+cd  experiments/gtav2cityscapes/1.0%
+
 # use torch.distributed.launch
 sh train.sh <num_gpu> <port>
 
@@ -145,8 +135,6 @@ sh train.sh <num_gpu> <port>
 ```bash
 sh eval.sh
 ```
-
-
 
 ## Acknowledgement
 
