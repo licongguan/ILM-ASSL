@@ -72,11 +72,8 @@ pip install torch==1.8.1+cu102 torchvision==0.9.1+cu102 -f https://download.pyto
 
 ```bash
 pip install cityscpaesscripts
-
 pip install cityscpaesscripts[gui]
-
 export CITYSCAPES_DATASET='/path_to_cityscapes'
-
 csCreateTrainIdLabelImgs
 ```
 
@@ -124,7 +121,6 @@ We have put our model checkpoints here [[Google Drive](https://drive.google.com/
 # training for GTAV to Cityscapes
 # use GTAV 2000 labeled images and Cityscpaes 30(1%) labeled images
 cd  experiments/gtav2cityscapes/1.0%
-
 # use torch.distributed.launch
 sh train.sh <num_gpu> <port>
 
