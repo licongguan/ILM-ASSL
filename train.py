@@ -13,16 +13,16 @@ import torch.distributed as dist
 import torch.nn.functional as F
 import yaml
 
-from stal.dataset.builder import get_loader
-from stal.models.model_helper import ModelBuilder
-from stal.utils.dist_helper import setup_distributed
-from stal.utils.loss_helper import (
+from core.dataset.builder import get_loader
+from core.models.model_helper import ModelBuilder
+from core.utils.dist_helper import setup_distributed
+from core.utils.loss_helper import (
     compute_contra_memobank_loss,
     compute_rce_loss,
     get_criterion,
 )
-from stal.utils.lr_helper import get_optimizer, get_scheduler
-from stal.utils.utils import (
+from core.utils.lr_helper import get_optimizer, get_scheduler
+from core.utils.utils import (
     AverageMeter,
     cal_category_confidence,
     dynamic_copy_paste,

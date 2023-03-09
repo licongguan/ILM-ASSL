@@ -13,8 +13,8 @@ import torch.utils.data
 import yaml
 from PIL import Image
 
-from stal.models.model_helper import ModelBuilder
-from stal.utils.utils import (
+from core.models.model_helper import ModelBuilder
+from core.utils.utils import (
     AverageMeter,
     check_makedirs,
     colorize,

@@ -43,20 +43,20 @@ def rename(old, new):
 
 if __name__ == '__main__':
     # gta5(images)
-    # img_path = '/data1/glc/STAL-master/data/dataset/gtav/images'
-    # new_img_path = '/data1/glc/STAL-master/data/dataset/cityscapes/leftImg8bit/train/gta5'
+    # img_path = '/data1/glc/CASS-master/data/dataset/gtav/images'
+    # new_img_path = '/data1/glc/CASS-master/data/dataset/cityscapes/leftImg8bit/train/gta5'
 
     # gta5(labels)
-    # img_path = '/data1/glc/STAL-master/data/dataset/gtav/labels'
-    # new_img_path = '/data1/glc/STAL-master/data/dataset/cityscapes/gtFine/train/gta5'
+    # img_path = '/data1/glc/CASS-master/data/dataset/gtav/labels'
+    # new_img_path = '/data1/glc/CASS-master/data/dataset/cityscapes/gtFine/train/gta5'
 
     # synthia(RGB)
-    # img_path = '/data1/glc/STAL-master/data/dataset/synthia/RGB'
-    # new_img_path = '/data1/glc/STAL-master/data/dataset/cityscapes/leftImg8bit/train/synthia'
+    # img_path = '/data1/glc/CASS-master/data/dataset/synthia/RGB'
+    # new_img_path = '/data1/glc/CASS-master/data/dataset/cityscapes/leftImg8bit/train/synthia'
 
     # synthia(LABELS)
-    img_path = '/data1/glc/STAL-master/data/dataset/synthia/LABELS'
-    new_img_path = '/data1/glc/STAL-master/data/dataset/cityscapes/gtFine/train/synthia'
+    img_path = '/data1/glc/CASS-master/data/dataset/synthia/LABELS'
+    new_img_path = '/data1/glc/CASS-master/data/dataset/cityscapes/gtFine/train/synthia'
 
     if not os.path.exists(new_img_path):
         os.makedirs(new_img_path)

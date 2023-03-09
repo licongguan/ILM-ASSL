@@ -12,8 +12,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from PIL import Image
-from stal.models.model_helper import ModelBuilder
-from stal.utils.utils import convert_state_dict, create_cityscapes_label_colormap
+from core.models.model_helper import ModelBuilder
+from core.utils.utils import convert_state_dict, create_cityscapes_label_colormap
 from Config import Detector_para, img_path
 
 

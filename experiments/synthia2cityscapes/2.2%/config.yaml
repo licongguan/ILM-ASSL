@@ -1,8 +1,8 @@
 dataset: # Required.
   type: cityscapes_semi_cp
   train:
-    data_root: /data1/glc/STAL-master/data/dataset/cityscapes
-    data_list: /data1/glc/STAL-master/data/synthia2cityscapes/2.2%/labeled.txt
+    data_root: /data1/glc/CASS-master/data/dataset/cityscapes
+    data_list: /data1/glc/CASS-master/data/synthia2cityscapes/2.2%/labeled.txt
     flip: True
     GaussianBlur: False
     rand_resize: [0.5, 2.0]
@@ -17,8 +17,8 @@ dataset: # Required.
       no_pad: True
       no_slim: True
   val:
-    data_root: /data1/glc/STAL-master/data/dataset/cityscapes
-    data_list: /data1/glc/STAL-master/data/synthia2cityscapes/val.txt  # val or val_gtav or val_synthia.txt
+    data_root: /data1/glc/CASS-master/data/dataset/cityscapes
+    data_list: /data1/glc/CASS-master/data/synthia2cityscapes/val.txt  # val or val_gtav or val_synthia.txt
     crop:
       type: center
       size: [769, 769] # crop image with HxW size
@@ -83,14 +83,14 @@ net: # Required.
     aux_plane: 1024
     loss_weight: 0.4
   encoder:
-    type: stal.models.resnet.resnet101
+    type: core.models.resnet.resnet101
     kwargs:
       multi_grid: True
       zero_init_residual: True
       fpn: True
       replace_stride_with_dilation: [False, True, True]  #layer0...1 is fixed, layer2...4
   decoder:
-    type: stal.models.decoder.dec_deeplabv3_plus
+    type: core.models.decoder.dec_deeplabv3_plus
     kwargs:
       inner_planes: 256
       dilations: [12, 24, 36]

@@ -151,9 +151,9 @@ if __name__ == '__main__':
     sec_num = 120
 
     # cs_txt 2975, first_labeled_txt 第一次标注的信息，second_labeled_txt 第二次需要标注的信息, city_uncertainty_dir 熵文件夹
-    cs_txt = "/data1/glc/STAL-master/data/cs/cs_all_list.txt"
-    first_labeled_txt = "/data1/glc/STAL-master/data/gtav2cityscapes/2.2%/labeled_cs30.txt"  # 30
-    second_labeled_txt = "/data1/glc/STAL-master/data/gtav2cityscapes/2.2%/labeled_cs35.txt"
-    city_uncertainty_dir = "/data1/glc/STAL-master/experiments/gtav2cityscapes/1.0%/checkpoints/act_learn_out/city_uncertainty/"
+    cs_txt = "/data1/glc/CASS-master/data/cs/cs_all_list.txt"
+    first_labeled_txt = "/data1/glc/CASS-masterr/data/gtav2cityscapes/2.2%/labeled_cs30.txt"  # 30
+    second_labeled_txt = "/data1/glc/CASS-master/data/gtav2cityscapes/2.2%/labeled_cs35.txt"
+    city_uncertainty_dir = "/data1/glc/CASS-master/experiments/gtav2cityscapes/1.0%/checkpoints/act_learn_out/city_uncertainty/"
 
     main()
