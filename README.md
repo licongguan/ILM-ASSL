@@ -9,7 +9,7 @@ by [Licong Guan](https://licongguan.github.io/), Xue Yuan
 
 </div>
 
-<div align="center"> <img width="70%" src="./img/Performance_comparison.png"></div>
+<!-- <div align="center"> <img width="70%" src="./img/Performance_comparison.png"></div> -->
 
 This repository provides the official code for the paper [Iterative Loop Combining Active Learning and  Semi-Supervised Learning for Domain  Adaptive Semantic Segmentation](https://arxiv.org/abs/2301.13361).
 
