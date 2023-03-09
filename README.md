@@ -159,8 +159,8 @@ This project is based on the following open-source projects: [U<sup>2</sup>PL](h
 If you find this project useful in your research, please consider citing:
 
 ```bibtex
-@inproceedings{guan2023iterative,
-  title={Iterative Loop Learning Combining Self-Training and Active Learning for Domain Adaptive Semantic Segmentation},
+@article{guan2023iterative,
+  title={Iterative Loop Combining Active Learning and  Semi-Supervised Learning for Domain  Adaptive Semantic Segmentation},
   author={Guan, Licong and Yuan, Xue},
   journal={arXiv preprint arXiv:2301.13361},
   year={2023}
