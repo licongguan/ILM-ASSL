@@ -66,7 +66,6 @@ pip install torch==1.8.1+cu102 torchvision==0.9.1+cu102 -f https://download.pyto
 │   └──	synthia/
 |   |   ├── RGB/
 |   |   ├── LABELS/
-│   └──	
 ```
 
 **Second, generate ```_labelTrainIds.png``` for the cityscapes dataset:**
