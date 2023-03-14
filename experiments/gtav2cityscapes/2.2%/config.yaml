@@ -1,8 +1,8 @@
 dataset: # Required.
   type: cityscapes_semi_cp
   train:
-    data_root: /data1/glc/CASS-master/data/dataset/cityscapes
-    data_list: /data1/glc/CASS-master/data/gtav2cityscapes/2.2%/labeled.txt
+    data_root: /data1/glc/ILM-ASSL-master/data/dataset/cityscapes
+    data_list: /data1/glc/ILM-ASSL-master/data/gtav2cityscapes/2.2%/labeled.txt
     flip: True
     GaussianBlur: False
     rand_resize: [0.5, 2.0]
@@ -17,8 +17,8 @@ dataset: # Required.
       no_pad: True
       no_slim: True
   val:
-    data_root: /data1/glc/CASS-master/data/dataset/cityscapes   # absolute path
-    data_list: /data1/glc/CASS-master/data/gtav2cityscapes/val.txt  # absolute path  # val or val_gtav
+    data_root: /data1/glc/ILM-ASSL-master/data/dataset/cityscapes   # absolute path
+    data_list: /data1/glc/ILM-ASSL-master/data/gtav2cityscapes/val.txt  # absolute path  # val or val_gtav
     crop:
       type: center
       size: [769, 769] # crop image with HxW size
