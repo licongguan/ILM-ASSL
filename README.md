@@ -11,6 +11,10 @@ by [Licong Guan](https://licongguan.github.io/), Xue Yuan
 
 <!-- <div align="center"> <img width="70%" src="./img/Performance_comparison.png"></div> -->
 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/iterative-loop-learning-combining-self/domain-adaptation-on-gta5-to-cityscapes)](https://paperswithcode.com/sota/domain-adaptation-on-gta5-to-cityscapes?p=iterative-loop-learning-combining-self)
+
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/iterative-loop-learning-combining-self/domain-adaptation-on-synthia-to-cityscapes)](https://paperswithcode.com/sota/domain-adaptation-on-synthia-to-cityscapes?p=iterative-loop-learning-combining-self)
+
 This repository provides the official code for the paper [Iterative Loop Method Combining Active and  Semi-Supervised Learning for Domain  Adaptive Semantic Segmentation](https://arxiv.org/abs/2301.13361).
 
 
